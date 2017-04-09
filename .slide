@@ -1,0 +1,109 @@
+What Ethereum is REALLY about
+Writing smart Contracts on Ethereum
+Tags: Ethereum, Solidity, Smart Contracts, BlokTex 2017
+
+Dave Appleton
+Lead Developer, HelloGold
+calistralabs@gmail.com
+http://hellogold.com
+@AppletonDave
+
+* Quick Intro / commericial break
+
+.image HG.png
+
+- HelloGold is platform to allow the average Malaysian to buy, store and sell investment grade gold at close to international spot prices as a means of diversifying their savings portfolio.
+- Is it a SCAM ?
+Founded by former CEO of World Gold Council
+CTO is former VP of Bangkok Bank 
+Partnering with AEON Credit
+Fully allocated gold vaulted in fully insured vault in Singapore
+
+
+
+* Personal philosophy w.r.t. blockchain
+
+EVERY COMPETENT SOFTWARE ARCHITECT SHOULD INCLUDE BLOCKCHAIN IN THEIR TOOLKIT
+
+* What I AM going to cover
+- programming smart contracts
+- some tools to help you get started
+- talking to contracts from a wallet
+- arbitary subjective comments about the state of systems today and where I think they should go
+
+* What I am NOT going to cover
+- How to call those contracts from your browser or from a server
+- How to build a business using smart contracts
+- How to buy and sell virtual currencies
+
+* Getting Started
+
+A smart contract is a program, just like any other with inputs, storage and outputs just on the blockchain.
+
+The smart contract ensures that
+- given an initial starting condition
+*and*
+- given a specific instruction with a particular set of data
+*then*
+- you will get a specific result
+
+* INPUTS
+
+_Inputs_ come from transactions or calls.
+
+- *Transactions*
+make changes to the storage (and cost Ether)
+can only return results by _events_
+
+- *Calls*		
+query the state of the storage or the results of a calculation
+get an immediate response
+cannot change the state of the storage
+
+
+* The language of ethereum smart contracts
+
+- Ethereum EVM is a bytecode interpreter. 
+Enables a variety of compilers to be developed to address different user bases.
+
+* Main Languages
+
+- Solidity
+Javascript like language. Probably the most popular smart contract language
+
+- Serpent
+Python derivative currently losing ground to....
+
+- Viper
+A new python derivative that is being actively promoted.
+
+- LLL (Low Level Language)
+Not quite assembly language but....
+
+- Assembler
+Down to the (almost) bare metal
+
+* Smart Contract 101  (demo in remix)
+
+.code code1.sol
+	
+- Security issue
+Anybody can change the rate !!!
+
+* Smart Contract 101 (demo in ethereum studio)
+
+.code ./code2.sol
+	
+- Security issue solved 
+Only the owner of the contract can change the rate !!!
+
+* Smart Contract 101  (demo in ethereum studio)
+
+.code ./code3.sol
+
+- *WARNING* I can store ANY NAME I LIKE... 
+ ...but only in a location that matches an address I control.
+
+* Smart Contract 101 (demo in Parity / Kovan)
+.code ./code4.sol
+
