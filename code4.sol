@@ -7,7 +7,7 @@ contract code4 {
    uint decimals public = 2;
    uint totalCoins public;
 
-   mapping (address => string) public balances;
+   mapping (address => uint) public balances;
 
    function transfer(address who, uint amount) {
        if (who == msg.sender) throw;
